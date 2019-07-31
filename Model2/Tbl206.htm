@@ -1,0 +1,591 @@
+<HTML>
+<HEAD>
+<TITLE>MARCACAO</TITLE>
+</HEAD>
+<BODY bgcolor=""#ffffff"" text=""#000000"">
+<TABLE WIDTH=100% CELLPADDING=1 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="darkblue" ><B><FONT SIZE=5 COLOR="white" FACE="Arial">MARCACAO&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=2 BORDER=2>
+<TR>
+<TD VALIGN=TOP WIDTH=20%% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Logical Entity Name&nbsp;</FONT></B></TD>
+<TD><FONT SIZE=2 FACE="Arial">MARCACAO&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP WIDTH=20%% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Default Table Name&nbsp;</FONT></B></TD>
+<TD><FONT SIZE=2 FACE="Arial">MARCACAO&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP WIDTH=20%% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Physical Only&nbsp;</FONT></B></TD>
+<TD><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP WIDTH=20%% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Do Not Generate&nbsp;</FONT></B></TD>
+<TD><FONT SIZE=2 FACE="Arial">False&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP WIDTH=20%% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Owner&nbsp;</FONT></B></TD>
+<TD><FONT SIZE=2 FACE="Arial">dbo&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP WIDTH=20%% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Definition&nbsp;</FONT></B></TD>
+<TD><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP WIDTH=20%% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Note&nbsp;</FONT></B></TD>
+<TD><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP WIDTH=20%% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">PreSQL&nbsp;</FONT></B></TD>
+<TD><TT>&nbsp;</TT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP WIDTH=20%% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">DDL Code&nbsp;</FONT></B></TD>
+<TD><TT><TT>CREATE TABLE dbo.MARCACAO(</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp id_marcacao&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp int&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp IDENTITY(1,1),</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp id_usuario&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp int&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NOT NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp id_atendimento&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp int&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp id_cadastro_temporario&nbsp&nbsp&nbsp&nbsp int&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp id_medico&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp int&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp id_paciente&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp int&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp id_unidade&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp int&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NOT NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp id_plano&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp int&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp id_procedimento&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp int&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp id_bloqueio&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp int&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp dt_inicio&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp datetime&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NOT NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp dt_termino&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp datetime&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp fl_extra&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bit&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp CONSTRAINT [DF__MARCACAO__fl_ext__147C05D0] DEFAULT ((0)) NOT NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp ch_estado_marcacao&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp char(1)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp CONSTRAINT [DF__MARCACAO__ch_est__15702A09] DEFAULT ('A') NOT NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp st_motivo_cancelamento&nbsp&nbsp&nbsp&nbsp varchar(300)&nbsp&nbsp&nbsp&nbsp NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp fl_particular&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bit&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp CONSTRAINT [DF__MARCACAO__fl_par__16644E42] DEFAULT ((0)) NOT NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp st_observacoes&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp varchar(100)&nbsp&nbsp&nbsp&nbsp NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp ch_tipo_consulta&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp char(1)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp dt_prazo_revisao&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp date&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp fl_adicao_direta&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bit&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp CONSTRAINT [DF__MARCACAO__fl_adi__1758727B] DEFAULT ((0)) NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp dt_inicio_atendimento&nbsp&nbsp&nbsp&nbsp&nbsp datetime&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp dt_termino_atendimento&nbsp&nbsp&nbsp&nbsp datetime&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp CONSTRAINT [DF__MARCACAO__dt_ter__184C96B4] DEFAULT (getdate()) NOT NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp fl_ordem_chegada&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bit&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp CONSTRAINT [DF__MARCACAO__fl_ord__1940BAED] DEFAULT ((0)) NOT NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp dt_cancelamento&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp datetime&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp dt_marcacao&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp datetime&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp NULL,</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp CONSTRAINT PK__MARCACAO__7E80D6B7B832D457 PRIMARY KEY CLUSTERED (id_marcacao), </TT><BR><TT>&nbsp&nbsp&nbsp&nbsp CONSTRAINT FK__MARCACAO__id_pac__1A34DF26 FOREIGN KEY (id_paciente)</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp REFERENCES dbo.PACIENTE(id_pessoa),</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp CONSTRAINT FK__MARCACAO__id_pro__1B29035F FOREIGN KEY (id_procedimento)</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp REFERENCES dbo.PROCEDIMENTO(id_procedimento),</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp CONSTRAINT FK__MARCACAO__id_pla__1C1D2798 FOREIGN KEY (id_plano)</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp REFERENCES dbo.PLANO(id_plano),</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp CONSTRAINT FK__MARCACAO__id_uni__1D114BD1 FOREIGN KEY (id_unidade)</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp REFERENCES dbo.UNIDADE(id_unidade),</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp CONSTRAINT FK__MARCACAO__id_med__1E05700A FOREIGN KEY (id_medico)</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp REFERENCES dbo.MEDICO(id_pessoa),</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp CONSTRAINT FK__MARCACAO__id_cad__1EF99443 FOREIGN KEY (id_cadastro_temporario)</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp REFERENCES dbo.CADASTRO_TEMPORARIO(id_cadastro_temporario),</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp CONSTRAINT FK__MARCACAO__id_ate__1FEDB87C FOREIGN KEY (id_atendimento)</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp REFERENCES dbo.ATENDIMENTO(id_atendimento),</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp CONSTRAINT FK__MARCACAO__id_blo__20E1DCB5 FOREIGN KEY (id_bloqueio)</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp REFERENCES dbo.BLOQUEIO(id_bloqueio),</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp CONSTRAINT FK__MARCACAO__id_usu__21D600EE FOREIGN KEY (id_usuario)</TT><BR><TT>&nbsp&nbsp&nbsp&nbsp REFERENCES dbo.USUARIO(id_usuario)</TT><BR><TT>)</TT><BR><TT>go</TT><BR>&nbsp;</TT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP WIDTH=20%% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">PostSQL&nbsp;</FONT></B></TD>
+<TD><TT>&nbsp;</TT></TD>
+</TR>
+</TABLE>
+<P>
+<TABLE WIDTH=100% CELLPADDING=3 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="LIGHTGREY" ><B><FONT SIZE=4 FACE="Arial">MARCACAO Columns&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=2 BORDER=2>
+<TR>
+<TD VALIGN=TOP  WIDTH=20% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">ColumnName&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=20% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Domain&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=18% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Datatype&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=7% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">NULL&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=46% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Definition&nbsp;</FONT></B></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1443">id_marcacao</A><img src="../Support/Gif/pk.gif" alt="(PK)">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">int&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1459">id_usuario</A><img src="../Support/Gif/fk.gif" alt="(FK)">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">int&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1460">id_atendimento</A><img src="../Support/Gif/fk.gif" alt="(FK)">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">int&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1461">id_cadastro_temporario</A><img src="../Support/Gif/fk.gif" alt="(FK)">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">int&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1462">id_medico</A><img src="../Support/Gif/fk.gif" alt="(FK)">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">int&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1463">id_paciente</A><img src="../Support/Gif/fk.gif" alt="(FK)">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">int&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1464">id_unidade</A><img src="../Support/Gif/fk.gif" alt="(FK)">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">int&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1465">id_plano</A><img src="../Support/Gif/fk.gif" alt="(FK)">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">int&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1466">id_procedimento</A><img src="../Support/Gif/fk.gif" alt="(FK)">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">int&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1467">id_bloqueio</A><img src="../Support/Gif/fk.gif" alt="(FK)">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">int&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1444">dt_inicio</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">datetime&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1445">dt_termino</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">datetime&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1446">fl_extra</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">bit&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1447">ch_estado_marcacao</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">char(1)&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1448">st_motivo_cancelamento</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">varchar(300)&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1449">fl_particular</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">bit&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1450">st_observacoes</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">varchar(100)&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1451">ch_tipo_consulta</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">char(1)&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1452">dt_prazo_revisao</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">date&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1453">fl_adicao_direta</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">bit&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1454">dt_inicio_atendimento</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">datetime&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1455">dt_termino_atendimento</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">datetime&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1456">fl_ordem_chegada</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">bit&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1457">dt_cancelamento</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">datetime&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Tbl206_Attr.htm#Attr1458">dt_marcacao</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">datetime&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">YES&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<TABLE WIDTH=100% CELLPADDING=3 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="LIGHTGREY" ><B><FONT SIZE=4 FACE="Arial">MARCACAO Primary and Unique Keys&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=2 BORDER=2>
+<TR>
+<TD VALIGN=TOP  WIDTH=22% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Key Name&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=22% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Key Type&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=50% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Keys&nbsp;</FONT></B></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">PK__MARCACAO__7E80D6B7B832D457&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">PrimaryKey&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">id_marcacao&nbsp;</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<TABLE WIDTH=100% CELLPADDING=3 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="LIGHTGREY" ><B><FONT SIZE=4 FACE="Arial">MARCACAO Foreign Keys&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=3 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="LIGHTGREY" ><B><FONT SIZE=3 FACE="Arial">Parent Relationships:&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=2 BORDER=2>
+<TR>
+<TD VALIGN=TOP  WIDTH=13% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Table Name&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=8% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Type&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=13% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Cardinality&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=13% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Constraint Name&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=13% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">VerbPhrase&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=13% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">InversePhrase&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=13% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Foreign Keys&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=6% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Is Supertype&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=6% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Not For Replication&nbsp;</FONT></B></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model2/Tbl313.htm">ATENDIMENTO</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Non-Identifying&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Zero or One to Zero or More&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Submodel2_Rel.htm#Rel546">FK__MARCACAO__id_ate__1FEDB87C</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">id_atendimento&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model2/Tbl327.htm">BLOQUEIO</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Non-Identifying&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Zero or One to Zero or More&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Submodel2_Rel.htm#Rel550">FK__MARCACAO__id_blo__20E1DCB5</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">id_bloqueio&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model2/Tbl331.htm">CADASTRO_TEMPORARIO</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Non-Identifying&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Zero or One to Zero or More&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Submodel2_Rel.htm#Rel542">FK__MARCACAO__id_cad__1EF99443</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">id_cadastro_temporario&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model2/Tbl217.htm">MEDICO</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Non-Identifying&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Zero or One to Zero or More&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Submodel2_Rel.htm#Rel539">FK__MARCACAO__id_med__1E05700A</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">id_medico&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model2/Tbl235.htm">PACIENTE</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Non-Identifying&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Zero or One to Zero or More&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Submodel2_Rel.htm#Rel525">FK__MARCACAO__id_pac__1A34DF26</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">id_paciente&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model2/Tbl248.htm">PLANO</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Non-Identifying&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Zero or One to Zero or More&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Submodel2_Rel.htm#Rel534">FK__MARCACAO__id_pla__1C1D2798</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">id_plano&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model2/Tbl250.htm">PROCEDIMENTO</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Non-Identifying&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Zero or One to Zero or More&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Submodel2_Rel.htm#Rel530">FK__MARCACAO__id_pro__1B29035F</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">id_procedimento&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model2/Tbl296.htm">UNIDADE</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Non-Identifying&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">One To Zero or More&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Submodel2_Rel.htm#Rel536">FK__MARCACAO__id_uni__1D114BD1</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">id_unidade&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model2/Tbl300.htm">USUARIO</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Non-Identifying&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">One To Zero or More&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Submodel2_Rel.htm#Rel552">FK__MARCACAO__id_usu__21D600EE</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">id_usuario&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=3 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="LIGHTGREY" ><B><FONT SIZE=3 FACE="Arial">Child Relationships:&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=2 BORDER=2>
+<TR>
+<TD VALIGN=TOP  WIDTH=13% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Table Name&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=8% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Type&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=13% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Cardinality&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=13% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Constraint Name&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=13% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">VerbPhrase&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=13% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">InversePhrase&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=13% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Foreign Keys&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=6% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Is Subtype&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=6% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Not For Replication&nbsp;</FONT></B></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model2/Tbl383.htm">HISTORICO_STATUS_MARCACAO</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Non-Identifying&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">One To Zero or More&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "Submodel2_Rel.htm#Rel706">FK__HISTORICO__id_ma__52442E1F</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">NO&nbsp;</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<TABLE WIDTH=100% CELLPADDING=3 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="LIGHTGREY" ><B><FONT SIZE=4 FACE="Arial">MARCACAO Check Constraints&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=2 BORDER=2>
+<TR>
+<TD VALIGN=TOP  WIDTH=22% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Check Constraint Name&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=66% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">CheckConstraint&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<P>
+<TABLE WIDTH=100% CELLPADDING=3 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="LIGHTGREY" ><B><FONT SIZE=4 FACE="Arial">MARCACAO Storage&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=2 BORDER=2>
+<TR>
+<TD VALIGN=TOP  WIDTH=22% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">STORAGE OPTION&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=60% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">STORAGE VALUE&nbsp;</FONT></B></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Filegroup&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">PRIMARY&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Text Image File Group&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+</TR>
+</TABLE>
+</TABLE>
+</TABLE>
+<P>
+<TABLE WIDTH=100% CELLPADDING=3 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="LIGHTGREY" ><B><FONT SIZE=4 FACE="Arial">MARCACAO Growth Metrics&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=2 BORDER=2>
+<TR>
+<TD VALIGN=TOP  WIDTH=20% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">TABLE METRIC&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=60% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">TABLE METRIC VALUE&nbsp;</FONT></B></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Current Row Count&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">0&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Growth&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Static&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Growth Type&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">N/A&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Growth Period&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">N/A&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">Maximum Rows&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">0&nbsp;</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<TABLE WIDTH=100% CELLPADDING=3 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="LIGHTGREY" ><B><FONT SIZE=4 FACE="Arial">MARCACAO Object Permissions&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=2 BORDER=2>
+<TR>
+<TD VALIGN=TOP  WIDTH=22% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">User/Role Name&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=22% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Grantee Type&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=22% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Permission Type&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=22% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Action Type&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=22% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Is Action Extended&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=22% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Is System&nbsp;</FONT></B></TD>
+</TR>
+<P>
+<TABLE WIDTH=100% CELLPADDING=3 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="LIGHTGREY" ><B><FONT SIZE=4 FACE="Arial">MARCACAO Security Types&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=2 BORDER=2>
+<TR>
+<TD VALIGN=TOP  WIDTH=30% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Name&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=46% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Current Value&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<P>
+<TABLE WIDTH=100% CELLPADDING=3 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="LIGHTGREY" ><B><FONT SIZE=4 FACE="Arial">MARCACAO Bound Attachments&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=2 BORDER=2>
+<TR>
+<TD VALIGN=TOP  WIDTH=30% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Name&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=46% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Current Value&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<P>
+<TABLE WIDTH=100% CELLPADDING=3 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="LIGHTGREY" ><B><FONT SIZE=4 FACE="Arial">MARCACAO Where Used - Model Usage&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=2 BORDER=2>
+<TR>
+<TD VALIGN=TOP  WIDTH=30% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Model&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=15% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Logical Entity Name&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=15% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Denormalization Mappings&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=40% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Definition&nbsp;</FONT></B></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model1/Model1.htm">Logical</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model1/Tbl96.htm">dbo.MARCACAO</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model2/Model2.htm">Physical</A> (Microsoft SQL Server)&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model2/Tbl206.htm">dbo.MARCACAO</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial">&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><PRE><FONT SIZE=2 FACE="Arial"></FONT></PRE>&nbsp;</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<TABLE WIDTH=100% CELLPADDING=3 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="LIGHTGREY" ><B><FONT SIZE=4 FACE="Arial">MARCACAO Where Used - Submodel Usage&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=2 BORDER=2>
+<TR>
+<TD VALIGN=TOP  WIDTH=40% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Model&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=60% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Submodel Usage&nbsp;</FONT></B></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model1/Model1.htm">Logical</A>&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model1/Submodel1_img.htm">Main Model</A>&nbsp;</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model2/Model2.htm">Physical</A> (Microsoft SQL Server)&nbsp;</FONT></TD>
+<TD VALIGN=TOP ><FONT SIZE=2 FACE="Arial"><A HREF = "../Model2/Submodel2_img.htm">Main Model</A>&nbsp;</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<TABLE WIDTH=100% CELLPADDING=3 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="LIGHTGREY" ><B><FONT SIZE=4 FACE="Arial">MARCACAO User-Defined Mappings&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=2 BORDER=2>
+<TR>
+<TD VALIGN=TOP  WIDTH=30% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Model&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=25% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Name&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=45% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Description&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<P>
+<TABLE WIDTH=100% CELLPADDING=3 BORDER=2>
+<TR>
+<TD VALIGN=TOP BGCOLOR="LIGHTGREY" ><B><FONT SIZE=4 FACE="Arial">MARCACAO Data Movement Rules&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH=100% CELLPADDING=2 BORDER=2>
+<TR>
+<TD VALIGN=TOP  WIDTH=30% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Name&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=10% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Type&nbsp;</FONT></B></TD>
+<TD VALIGN=TOP  WIDTH=46% bgcolor="#87BCFF"><B><FONT SIZE=2 FACE="Arial">Rule Text/Value&nbsp;</FONT></B></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>
